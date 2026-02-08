@@ -1,6 +1,8 @@
 ---
 layout: single
-title: ""
+title: "Home"
+header:
+  overlay: false
 permalink: /
 author_profile: false
 ---
