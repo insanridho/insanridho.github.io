@@ -1,0 +1,8 @@
+title: "Insan Ridho"
+description: "Transport & energy transition · Jakarta, Indonesia"
+theme: minima
+
+header_pages:
+  - cv.md
+  - blog.md
+  - contact.md
