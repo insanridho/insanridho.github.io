@@ -32,3 +32,8 @@ This website serves as a professional record of my work, including:
 - Blog posts and reflections on transport policy, electric mobility, and energy transition in Indonesia  
 
 The views expressed here are my own.
+
+## Quick links
+- **[CV](/cv/)** — experience, education, skills, certifications
+- **[Blog](/blog/)** — posts and reflections
+- **[Contact](/contact/)** — reach out
