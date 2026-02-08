@@ -1,0 +1,7 @@
+title: Insan Ridho
+description: Personal site and portfolio
+url: "https://insanridho.github.io"
+baseurl: ""
+
+markdown: kramdown
+excerpt_separator: "<!--more-->"
