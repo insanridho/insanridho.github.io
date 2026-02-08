@@ -1,20 +1,18 @@
 ---
 layout: single
-title: ""
+title: "Home"
 permalink: /
-author_profile: false
-show_title: false
+author_profile: true
 ---
 
-# Insan Ridho Chairuasni
+## Insan Ridho Chairuasni
 
-Transport and energy transition professional based in Jakarta with over 10 years of experience across public policy, donor-funded programs, state-owned enterprises, and the private sector.
+Transport and energy transition professional based in Jakarta with 10+ years of experience across public policy, donor-funded programs, state-owned enterprises, and the private sector.
 
-Currently a **Transport Specialist at World Resources Institute (WRI) Indonesia**, leading work on **supply-side regulation for zero-emission vehicles (ZEVs)** and supporting collaboration between government, industry, and development partners.
+Currently a **Transport Specialist at World Resources Institute (WRI) Indonesia**, focusing on **zero-emission vehicle (ZEV) policy**, **electric mobility**, and **transport decarbonization**.
 
-**Focus areas**
-- Zero-emission vehicle policy and regulatory reform  
+### Focus areas
+- ZEV policy and regulatory reform  
 - Electric mobility and fleet transition  
-- Program delivery, procurement, and institutional improvement  
-
-*The views expressed here are my own.*
+- Program delivery and procurement  
+- Institutional and operational improvement
