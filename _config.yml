@@ -3,6 +3,15 @@ description: Personal site and portfolio
 url: "https://insanridho.github.io"
 baseurl: ""
 
+author:
+  name: "Insan Ridho Chairuasni"
+  avatar: "/assets/images/profile.jpg"
+  bio: "Transport & energy transition · ZEV policy · Indonesia"
+  links:
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "YOUR_LINKEDIN_URL"
+
 remote_theme: "mmistakes/minimal-mistakes"
 plugins:
   - jekyll-remote-theme
