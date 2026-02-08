@@ -2,7 +2,7 @@
 layout: single
 title: ""
 permalink: /
-author_profile: true
+author_profile: false
 ---
 
 # Insan Ridho Chairuasni
