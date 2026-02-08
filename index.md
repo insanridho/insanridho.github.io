@@ -1,9 +1,11 @@
 ---
 layout: single
-title: "Insan Ridho Chairuasni"
+title: "Home"
 permalink: /
 author_profile: false
 ---
+
+# Insan Ridho Chairuasni
 
 I am a transport and energy transition professional based in Jakarta, with 10+ years of experience across public policy, donor-funded programs, SOEs, and the private sector in Indonesia.
 
