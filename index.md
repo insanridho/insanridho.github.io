@@ -3,20 +3,27 @@ layout: page
 title: Home
 ---
 
-<div style="display:flex; gap:18px; align-items:flex-start; margin-top:10px;">
+<div style="display:flex; gap:20px; align-items:flex-start; margin-top:10px;">
+
   <img src="/assets/images/profile.jpg"
        alt="Insan Ridho Chairuasni"
-       style="width:160px; height:160px; object-fit:cover; border-radius:12px;">
+       style="width:160px; height:160px; object-fit:cover; border-radius:50%;">
+
   <div>
 
-# Insan Ridho Chairuasni
+    <h1>Insan Ridho Chairuasni</h1>
 
-Transport and energy transition professional based in Jakarta.  
-Focused on zero-emission vehicles (ZEV), electric mobility, and transport decarbonization.
+    <p>
+      Transport and energy transition professional based in Jakarta.<br>
+      Focused on <strong>zero-emission vehicles (ZEV)</strong>, electric mobility,
+      and transport decarbonization.
+    </p>
 
-- ZEV policy and regulatory reform
-- Program delivery and stakeholder coordination
-- Procurement and operational improvement
+    <ul>
+      <li>ZEV policy and regulatory reform</li>
+      <li>Program delivery and stakeholder coordination</li>
+      <li>Procurement and operational improvement</li>
+    </ul>
 
   </div>
 </div>
