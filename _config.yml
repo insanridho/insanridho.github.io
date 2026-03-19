@@ -18,7 +18,7 @@ remote_theme             : "academicpages/academicpages.github.io"
 # =============================================================
 author:
   name             : "Insan Ridho Chairuasni"
-  avatar           : "/assets/images/profile.jpg"
+  avatar           : "assets/images/profile.jpg"
   bio              : "Transport & Energy Transition Professional."
   location         : "Jakarta, Indonesia"
   email            : "your@email.com"          # ← replace
