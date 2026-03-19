@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Transport and energy transition professional based in Jakarta, specialising in zero-emission vehicles, electric mobility, and transport decarbonisation.">
+  <meta property="og:title" content="Insan Ridho Chairuasni">
+  <meta property="og:description" content="Transport & Energy Transition Professional based in Jakarta, Indonesia.">
+  <title>Insan Ridho Chairuasni</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f7f5f0;
+      --surface: #ffffff;
+      --text: #1a1a1a;
+      --text-muted: #6b6b6b;
+      --accent: #1a5c38;
+      --accent-light: #eaf2ed;
+      --border: #e4e0d8;
+      --sidebar-width: 280px;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Layout ── */
+    .layout {
+      display: flex;
+      min-height: 100vh;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* ── Sidebar ── */
+    .sidebar {
+      width: var(--sidebar-width);
+      flex-shrink: 0;
+      background: var(--surface);
+      border-right: 1px solid var(--border);
+      padding: 48px 28px;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .profile-photo {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--border);
+      display: block;
+    }
+
+    .profile-photo-placeholder {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: var(--accent-light);
+      border: 3px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'DM Serif Display', serif;
+      font-size: 36px;
+      color: var(--accent);
+    }
+
+    .sidebar-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 18px;
+      line-height: 1.3;
+      color: var(--text);
+    }
+
+    .sidebar-title {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 4px;
+      font-weight: 300;
+    }
+
+    .sidebar-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .sidebar-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sidebar-meta-item svg {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+      stroke: var(--text-muted);
+    }
+
+    .sidebar-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .sidebar-nav a {
+      display: block;
+      padding: 7px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .sidebar-nav a:hover,
+    .sidebar-nav a.active {
+      background: var(--accent-light);
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .sidebar-footer {
+      margin-top: auto;
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* ── Main content ── */
+    .main {
+      flex: 1;
+      padding: 48px 52px;
+      min-width: 0;
+    }
+
+    /* ── Sections ── */
+    .section {
+      display: none;
+    }
+
+    .section.active {
+      display: block;
+      animation: fadeIn 0.2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Typography ── */
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 24px;
+      color: var(--text);
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 20px;
+      font-weight: 400;
+      margin: 40px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    h2:first-of-type { margin-top: 32px; }
+
+    p { margin-bottom: 16px; color: var(--text); }
+
+    strong { font-weight: 500; }
+
+    /* ── About section ── */
+    .about-intro {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--text);
+      max-width: 640px;
+    }
+
+    .highlights {
+      list-style: none;
+      margin-top: 8px;
+    }
+
+    .highlights li {
+      display: flex;
+      gap: 16px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      align-items: baseline;
+    }
+
+    .highlights li:last-child { border-bottom: none; }
+
+    .highlight-date {
+      color: var(--text-muted);
+      font-size: 13px;
+      white-space: nowrap;
+      min-width: 80px;
+      font-weight: 300;
+    }
+
+    /* ── CV section ── */
+    .experience-item {
+      margin-bottom: 28px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .experience-item:last-child {
+      border-bottom: none;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .exp-role {
+      font-weight: 500;
+      font-size: 15px;
+    }
+
+    .exp-date {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 300;
+    }
+
+    .exp-org {
+      font-size: 14px;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .exp-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    .edu-item {
+      margin-bottom: 20px;
+    }
+
+    .edu-degree {
+      font-weight: 500;
+      font-size: 15px;
+    }
+
+    .edu-school {
+      font-size: 14px;
+      color: var(--accent);
+      margin: 2px 0;
+    }
+
+    .edu-detail {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .awards-list {
+      list-style: none;
+    }
+
+    .awards-list li {
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      display: flex;
+      gap: 12px;
+      align-items: baseline;
+    }
+
+    .awards-list li:last-child { border-bottom: none; }
+
+    .award-year {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 300;
+      min-width: 40px;
+    }
+
+    /* ── Publications section ── */
+    .pub-item {
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .pub-item:last-child { border-bottom: none; }
+
+    .pub-title {
+      font-weight: 500;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    .pub-venue {
+      font-size: 13px;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .pub-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ── Contact section ── */
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 8px;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 20px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 14px;
+      color: var(--text);
+      transition: border-color 0.15s, background 0.15s;
+    }
+
+    .contact-link:hover {
+      border-color: var(--accent);
+      background: var(--accent-light);
+      text-decoration: none;
+      color: var(--accent);
+    }
+
+    .contact-link svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+
+    /* ── Mobile nav ── */
+    .mobile-nav {
+      display: none;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      gap: 4px;
+      overflow-x: auto;
+    }
+
+    .mobile-nav a {
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-muted);
+      white-space: nowrap;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .mobile-nav a:hover,
+    .mobile-nav a.active {
+      background: var(--accent-light);
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .sidebar { display: none; }
+      .mobile-nav { display: flex; }
+      .main { padding: 32px 24px; }
+      .layout { flex-direction: column; max-width: 100%; }
+      h1 { font-size: 26px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Mobile nav -->
+<nav class="mobile-nav">
+  <a href="#" class="active" onclick="showSection('about', this)">About</a>
+  <a href="#" onclick="showSection('cv', this)">CV</a>
+  <a href="#" onclick="showSection('publications', this)">Publications</a>
+  <a href="#" onclick="showSection('contact', this)">Contact</a>
+</nav>
+
+<div class="layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <!-- Replace the placeholder below with an <img> tag once you have the photo uploaded -->
+    <div class="profile-photo-placeholder">IR</div>
+    <!-- Uncomment this line and remove the placeholder above once profile.jpg is in place:
+    <img class="profile-photo" src="assets/images/profile.jpg" alt="Insan Ridho Chairuasni">
+    -->
+
+    <div>
+      <div class="sidebar-name">Insan Ridho Chairuasni</div>
+      <div class="sidebar-title">Transport & Energy Transition Professional</div>
+    </div>
+
+    <div class="sidebar-meta">
+      <div class="sidebar-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        Jakarta, Indonesia
+      </div>
+      <div class="sidebar-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        <a href="https://linkedin.com/in/insanridho" target="_blank">linkedin.com/in/insanridho</a>
+      </div>
+      <div class="sidebar-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        <a href="https://github.com/insanridho" target="_blank">github.com/insanridho</a>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="#" class="active" onclick="showSection('about', this)">About me</a>
+      <a href="#" onclick="showSection('cv', this)">CV</a>
+      <a href="#" onclick="showSection('publications', this)">Publications</a>
+      <a href="#" onclick="showSection('contact', this)">Contact</a>
+    </nav>
+
+    <div class="sidebar-footer">
+      © 2026 Insan Ridho Chairuasni
+    </div>
+  </aside>
+
+  <!-- Main content -->
+  <main class="main">
+
+    <!-- About -->
+    <section id="about" class="section active">
+      <h1>About me</h1>
+      <div class="about-intro">
+        <p>I am a transport and energy transition professional based in Jakarta, Indonesia. My work focuses on <strong>zero-emission vehicles (ZEV)</strong>, electric mobility policy, and transport decarbonisation across Indonesia and Southeast Asia.</p>
+        <p>Currently a <strong>Transport Specialist at WRI Indonesia</strong>, I lead initiatives at the intersection of clean energy policy and urban mobility — working with government agencies, development partners, and industry to accelerate Indonesia's transition to low-carbon transport.</p>
+        <p>My background spans over a decade across policy, program management, engineering, and operations — giving me the ability to engage credibly from technical detail through to ministerial-level stakeholder dialogue.</p>
+        <p>I am open to collaboration on ZEV policy, electric mobility research, and transport decarbonisation. Reach me via <a href="#" onclick="showSection('contact', null)">the contact page</a>.</p>
+      </div>
+
+      <h2>Recent Highlights</h2>
+      <ul class="highlights">
+        <li><span class="highlight-date">Feb 2026</span><span>Keynote Speaker — Binus ICOBAR International Conference, Jakarta</span></li>
+        <li><span class="highlight-date">Feb 2026</span><span>WRI Indonesia Top Internal Voluntary Knowledge Product Reviewer 2025</span></li>
+        <li><span class="highlight-date">Aug 2025</span><span>Panellist — 2025–2029 Jakarta Transport Plan Discussion</span></li>
+        <li><span class="highlight-date">May 2025</span><span>Joined WRI Indonesia as Transport Specialist</span></li>
+        <li><span class="highlight-date">Aug 2024</span><span>Australian Award — Short Course on Transition to Electric Vehicle</span></li>
+        <li><span class="highlight-date">Oct 2023</span><span>International Panellist — Asia Clean Energy Summit, Singapore</span></li>
+        <li><span class="highlight-date">Oct 2022</span><span>USYSEALI Professional Fellow — US State Department</span></li>
+      </ul>
+    </section>
+
+    <!-- CV -->
+    <section id="cv" class="section">
+      <h1>CV</h1>
+
+      <h2>Experience</h2>
+
+      <div class="experience-item">
+        <div class="exp-header">
+          <span class="exp-role">Transport Specialist</span>
+          <span class="exp-date">May 2025 – Present</span>
+        </div>
+        <div class="exp-org">World Resources Institute (WRI) Indonesia</div>
+        <div class="exp-desc">Leading the Drive Electric Campaign on supply-side ZEV regulation, managing a USD 380,000+ budget and coordinating Indonesia's zero-emission vehicle roadmap across more than eleven institutions.</div>
+      </div>
+
+      <div class="experience-item">
+        <div class="exp-header">
+          <span class="exp-role">Program Officer — Infrastructure Funding & Financing</span>
+          <span class="exp-date">Sep 2024 – May 2025</span>
+        </div>
+        <div class="exp-org">KIAT (Indonesia Australia Partnership for Infrastructure)</div>
+        <div class="exp-desc">Managed program delivery across AUD 12 million in project disbursements, supporting the Ministry of Finance and coordinating national ministry stakeholders.</div>
+      </div>
+
+      <div class="experience-item">
+        <div class="exp-header">
+          <span class="exp-role">Department Head — Business Improvement & Strategic Procurement</span>
+          <span class="exp-date">May 2023 – Sep 2024</span>
+        </div>
+        <div class="exp-org">PT Transportasi Jakarta (Transjakarta)</div>
+        <div class="exp-desc">Led procurement and process improvement across 30+ departments with annual budgets exceeding IDR 2.1 trillion. Achieved 21% cost savings through improvement programs and 9.4% cost efficiency through procurement analytics.</div>
+      </div>
+
+      <div class="experience-item">
+        <div class="exp-header">
+          <span class="exp-role">Section Head — Fleet Development & Evaluation</span>
+          <span class="exp-date">Mar 2021 – May 2023</span>
+        </div>
+        <div class="exp-org">PT Transportasi Jakarta (Transjakarta)</div>
+        <div class="exp-desc">Directed electric bus trial programs covering more than 90 days, 1,500 hours, and 18,500 km per unit. Created operational analytics from 30 EV units over more than one year.</div>
+      </div>
+
+      <div class="experience-item">
+        <div class="exp-header">
+          <span class="exp-role">Transport Associate</span>
+          <span class="exp-date">Feb 2020 – Mar 2021</span>
+        </div>
+        <div class="exp-org">Institute for Transportation and Development Policy (ITDP)</div>
+        <div class="exp-desc">Coordinated a USD 240,000 e-mobility project covering electric bus business model and finance analysis for Jakarta.</div>
+      </div>
+
+      <h2>Education</h2>
+
+      <div class="edu-item">
+        <div class="edu-degree">MSc in Transport Planning and Engineering</div>
+        <div class="edu-school">Newcastle University, United Kingdom</div>
+        <div class="edu-detail">2017 · Merit</div>
+      </div>
+
+      <div class="edu-item">
+        <div class="edu-degree">BSc in Mechanical Engineering</div>
+        <div class="edu-school">Institut Teknologi Bandung (ITB), Indonesia</div>
+        <div class="edu-detail">2014 · Distinction</div>
+      </div>
+
+      <h2>Awards & Recognition</h2>
+      <ul class="awards-list">
+        <li><span class="award-year">2026</span><span>WRI Indonesia Top Internal Voluntary Knowledge Product Reviewer</span></li>
+        <li><span class="award-year">2024</span><span>Australian Award — Short Course on Transition to Electric Vehicle</span></li>
+        <li><span class="award-year">2023</span><span>Champion, Transjakarta Major Corporate Innovation — Bus Dashboard</span></li>
+        <li><span class="award-year">2022</span><span>USYSEALI Professional Fellow — US State Department</span></li>
+        <li><span class="award-year">2015</span><span>LPDP Indonesian Endowment Fund Scholarship Awardee</span></li>
+      </ul>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications" class="section">
+      <h1>Publications</h1>
+      <p style="color: var(--text-muted); font-size:14px;">Selected publications, policy reports, and op-eds on transport decarbonisation and urban mobility in Indonesia.</p>
+
+      <h2>Policy Reports</h2>
+
+      <div class="pub-item">
+        <div class="pub-title">CTCN UNIDO Closure Report: Supporting Jakarta's Transition to E-Mobility</div>
+        <div class="pub-venue">CTCN / UNIDO · 2021</div>
+        <div class="pub-desc">Contributing author. Covers electric bus business models, financing analysis, and policy recommendations for Jakarta's EV transition.</div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">Measuring Staff Availability in Public Transport</div>
+        <div class="pub-venue">IOP Conference Series: Earth and Environmental Science · 2020</div>
+        <div class="pub-desc">Peer-reviewed paper on staff scheduling and availability modelling in urban metro systems.</div>
+      </div>
+
+      <h2>Op-Eds</h2>
+
+      <div class="pub-item">
+        <div class="pub-title">Menganulir Mobil Listrik sebagai Jawaban Krisis BBM</div>
+        <div class="pub-venue">Kumparan · 2022</div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">Perpanjangan Diskon PPnBM dan Nasib Transportasi Publik</div>
+        <div class="pub-venue">Detik · 2021</div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">Musnahnya Perkembangan Bahan Bakar Gas di Indonesia</div>
+        <div class="pub-venue">Geotimes · 2021</div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <h1>Contact</h1>
+      <p>I welcome inquiries related to ZEV policy, electric mobility research, transport decarbonisation, and speaking engagements.</p>
+
+      <div class="contact-links">
+        <a class="contact-link" href="https://linkedin.com/in/insanridho" target="_blank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          linkedin.com/in/insanridho
+        </a>
+        <a class="contact-link" href="mailto:your@email.com">
+          <!-- Replace your@email.com with your actual email -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          your@email.com
+        </a>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  function showSection(id, clickedLink) {
+    // Hide all sections
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    // Show target
+    document.getElementById(id).classList.add('active');
+    // Update nav active state in sidebar
+    document.querySelectorAll('.sidebar-nav a, .mobile-nav a').forEach(a => a.classList.remove('active'));
+    // Set active on all nav links matching this section
+    document.querySelectorAll('.sidebar-nav a, .mobile-nav a').forEach(a => {
+      if (a.getAttribute('onclick') && a.getAttribute('onclick').includes("'" + id + "'")) {
+        a.classList.add('active');
+      }
+    });
+    return false;
+  }
+</script>
+
+</body>
+</html>
