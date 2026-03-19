@@ -1,0 +1,86 @@
+# =============================================================
+# Site settings
+# =============================================================
+title                    : "Insan Ridho Chairuasni"
+name                     : "Insan Ridho Chairuasni"
+description              : "Transport and energy transition professional based in Jakarta, specialising in zero-emission vehicles, electric mobility, and transport decarbonisation."
+url                      : "https://www.insanridho.com"
+baseurl                  : ""
+repository               : "insanridho/insanridho.github.io"
+
+# =============================================================
+# Theme
+# =============================================================
+remote_theme             : "academicpages/academicpages.github.io"
+
+# =============================================================
+# Author sidebar
+# =============================================================
+author:
+  name             : "Insan Ridho Chairuasni"
+  avatar           : "assets/images/profile.jpg"
+  bio              : "Transport & Energy Transition Professional."
+  location         : "Jakarta, Indonesia"
+  email            : "your@email.com"          # ← replace with your actual email
+  linkedin         : "insanridho"
+
+# =============================================================
+# Site navigation (top bar)
+# =============================================================
+navigation:
+  - title: "CV"
+    url: /cv/
+  - title: "Publications"
+    url: /publications/
+  - title: "Contact"
+    url: /contact/
+
+# =============================================================
+# Plugins
+# =============================================================
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
+
+whitelist:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
+
+# =============================================================
+# Reading files
+# =============================================================
+include:
+  - _pages
+exclude:
+  - vendor
+  - Gemfile
+  - README.md
+
+# =============================================================
+# Markdown
+# =============================================================
+markdown                 : kramdown
+highlighter              : rouge
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+
+# =============================================================
+# Defaults
+# =============================================================
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+# =============================================================
+# Output
+# =============================================================
+timezone: Asia/Jakarta
