@@ -9,6 +9,8 @@ I am currently a **Transport Specialist at [WRI Indonesia](https://wri-indonesia
 
 My work sits at the intersection of **transport policy, clean energy, and sustainable urban mobility**. With over a decade of experience spanning mechanical engineering, railway operations, large-scale procurement at Transjakarta, and international program management, I bring both technical depth and policy fluency to the challenge of decarbonising transport in Indonesia and Southeast Asia.
 
+I am open to collaboration on ZEV policy, electric mobility research, and transport decarbonisation programs. Reach me at **insanridho[at]gmail[dot]com**.
+
 ---
 
 ## News
