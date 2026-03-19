@@ -7,5 +7,4 @@ author_profile: true
 
 I welcome inquiries related to ZEV policy, electric mobility research, transport decarbonisation, and speaking engagements.
 
-* **Email:** your@email.com *(replace with your actual email)*
 * **LinkedIn:** [linkedin.com/in/insanridho](https://linkedin.com/in/insanridho)
