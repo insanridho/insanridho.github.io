@@ -404,10 +404,44 @@
 
     /* ── Responsive ── */
     @media (max-width: 768px) {
-      .sidebar { display: none; }
-      .mobile-nav { display: flex; }
-      .main { padding: 32px 24px; }
+      .mobile-nav { display: none; }
       .layout { flex-direction: column; max-width: 100%; }
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        padding: 32px 24px 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+      .profile-photo,
+      .profile-photo-placeholder {
+        width: 80px;
+        height: 80px;
+        font-size: 28px;
+      }
+      .sidebar-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      .sidebar-nav a {
+        padding: 5px 12px;
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        font-size: 13px;
+      }
+      .sidebar-nav a.active,
+      .sidebar-nav a:hover {
+        background: var(--accent-light);
+        color: var(--accent);
+        border-color: var(--accent-light);
+      }
+      .sidebar-footer { display: none; }
+      .main { padding: 32px 24px; }
       h1 { font-size: 26px; }
     }
   </style>
@@ -426,7 +460,11 @@
 
   <!-- Sidebar -->
   <aside class="sidebar">
+    <!-- Replace the placeholder below with an <img> tag once you have the photo uploaded -->
+    <div class="profile-photo-placeholder">IR</div>
+    <!-- Uncomment this line and remove the placeholder above once profile.jpg is in place:
     <img class="profile-photo" src="assets/images/profile.jpg" alt="Insan Ridho Chairuasni">
+    -->
 
     <div>
       <div class="sidebar-name">Insan Ridho Chairuasni</div>
@@ -541,13 +579,13 @@
       <div class="edu-item">
         <div class="edu-degree">MSc in Transport Planning and Engineering</div>
         <div class="edu-school">Newcastle University, United Kingdom</div>
-        <div class="edu-detail">2017</div>
+        <div class="edu-detail">2017 · Merit</div>
       </div>
 
       <div class="edu-item">
         <div class="edu-degree">BSc in Mechanical Engineering</div>
         <div class="edu-school">Institut Teknologi Bandung (ITB), Indonesia</div>
-        <div class="edu-detail">2014</div>
+        <div class="edu-detail">2014 · Distinction</div>
       </div>
 
       <h2>Awards & Recognition</h2>
